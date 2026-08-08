@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <h1>📝 My To-Do List</h1>
+
+        <p class="subtitle">
+            Organize your tasks and stay productive
+        </p>
+
+
+        <!-- Statistics -->
+        <div class="stats">
+
+            <div class="stat-card">
+                <span id="totalCount">0</span>
+                <p>Total</p>
+            </div>
+
+            <div class="stat-card">
+                <span id="pendingCount">0</span>
+                <p>Pending</p>
+            </div>
+
+            <div class="stat-card">
+                <span id="completedCount">0</span>
+                <p>Completed</p>
+            </div>
+
+        </div>
+
+
+        <!-- Add Todo Form -->
+        <form id="todoForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter your task..."
+                required
+            >
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Enter description..."
+            >
+
+            <button type="submit">
+                ➕ Add Task
+            </button>
+
+        </form>
+
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button
+                class="filter-btn active"
+                onclick="filterTodos('all')"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterTodos('pending')"
+            >
+                Pending
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterTodos('completed')"
+            >
+                Completed
+            </button>
+
+        </div>
+
+
+        <!-- Todo List -->
+        <div id="todoList"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
