@@ -1,0 +1,472 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+    padding: 40px 20px;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   TODO FORM
+================================ */
+
+#todoForm {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#todoForm input {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    font-size: 15px;
+    color: #1e293b;
+
+    outline: none;
+    transition: 0.2s ease;
+}
+
+#todoForm input::placeholder {
+    color: #94a3b8;
+}
+
+#todoForm input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* ================================
+   ADD BUTTON
+================================ */
+
+#todoForm button {
+    border: none;
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#todoForm button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+#todoForm button:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   TODO LIST
+================================ */
+
+#todoList {
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* ================================
+   TODO CARD
+================================ */
+
+.todo {
+    background: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    padding: 20px;
+
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.06);
+
+    transition: 0.2s ease;
+}
+
+.todo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+
+/* ================================
+   TODO TITLE
+================================ */
+
+.todo h3 {
+    font-size: 20px;
+    color: #1e293b;
+
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   TODO DESCRIPTION
+================================ */
+
+.todo p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.todo button {
+    border: none;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-right: 8px;
+    margin-top: 8px;
+
+    transition: 0.2s ease;
+}
+
+
+/* ================================
+   COMPLETE BUTTON
+================================ */
+
+.complete-btn {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.complete-btn:hover {
+    background: #c7d2fe;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   DELETE BUTTON
+================================ */
+
+.delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 22px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    #todoForm {
+        padding: 16px;
+    }
+
+    .todo {
+        padding: 16px;
+    }
+
+    .todo h3 {
+        font-size: 18px;
+    }
+
+    .todo button {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+/* ================================
+   STATISTICS
+================================ */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ================================
+   FILTERS
+================================ */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #475569;
+    padding: 9px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #f1f5f9;
+}
+
+.filter-btn.active {
+    background: #4f46e5;
+    color: white;
+    border-color: #4f46e5;
+}
+
+
+/* ================================
+   TODO CONTENT
+================================ */
+
+.todo-content {
+    margin-bottom: 10px;
+}
+
+.todo.completed {
+    opacity: 0.75;
+}
+
+.todo.completed h3 {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+
+/* ================================
+   STATUS BADGES
+================================ */
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pending-status {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.completed-status {
+    background: #dcfce7;
+    color: #166534;
+}
+
+
+/* ================================
+   TODO ACTIONS
+================================ */
+
+.todo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.todo-actions button {
+    margin: 0;
+}
+
+
+/* ================================
+   EDIT BUTTON
+================================ */
+
+.edit-btn {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.edit-btn:hover {
+    background: #c7d2fe;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   EMPTY MESSAGE
+================================ */
+
+.empty-message {
+    text-align: center;
+    padding: 45px 20px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 15px;
+    background: #f8fafc;
+}
+
+.empty-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.empty-message h3 {
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.empty-message p {
+    color: #64748b;
+}
+
+
+/* ================================
+   RESPONSIVE STATISTICS
+================================ */
+
+@media (max-width: 600px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        flex: 1;
+    }
+
+    .todo-actions {
+        flex-direction: column;
+    }
+
+    .todo-actions button {
+        width: 100%;
+    }
+}
