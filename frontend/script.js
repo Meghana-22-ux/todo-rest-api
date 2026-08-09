@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/todos";
+const API_URL = "https://todo-rest-api-47s4.onrender.com/api/todos";
 
 const todoForm = document.getElementById("todoForm");
 const todoList = document.getElementById("todoList");
