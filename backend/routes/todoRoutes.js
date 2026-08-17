@@ -1,7 +1,8 @@
 const express = require("express");
 const Todo = require("../models/Todo");
-
+const authMiddleware = require("../middleware/authMiddleware");
 const router = express.Router();
+router.use(authMiddleware);
 
 // GET - Get all todos
 router.get("/", async (req, res) => {
